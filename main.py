@@ -4,9 +4,7 @@ import speech_recognition as sr
 from gtts import gTTS
 import tempfile
 import requests
-import config 
-
-azure_openai_key = config.API_KEY
+azure_openai_key = "22ec84421ec24230a3638d1b51e3a7dc"
 azure_openai_endpoint = "https://internshala.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2024-08-01-preview"  
 
 
