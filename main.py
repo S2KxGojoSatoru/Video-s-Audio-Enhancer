@@ -66,14 +66,20 @@ if uploaded_file:
         st.write("Transcribing audio...")
         transcription = transcribe_audio("temp_video.mp4")
         st.write("Transcription completed.")
+        st.write("Your Transcript:")
+        st.write(transcription)
 
         st.write("Correcting transcription...")
         corrected_transcription = correct_transcription(transcription)
         st.write("Transcription corrected.")
+        st.write("Corrected Transcript:")
+        st.write(corrected_transcription)
 
         st.write("Generating new audio...")
         new_audio_path = generate_audio(corrected_transcription)
         st.write("New audio generated.")
+        st.write("Generated Audio: ")
+        st.audio(new_audio_path)
 
         st.write("Replacing audio in video...")
         final_video_path = replace_audio("temp_video.mp4", new_audio_path)
