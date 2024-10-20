@@ -65,19 +65,19 @@ if uploaded_file:
     if st.button("Process Video"):
         st.write("Transcribing audio...")
         transcription = transcribe_audio("temp_video.mp4")
-        st.write("Transcription completed.")
+        st.success("Transcription completed.")
         st.write("Your Transcript:")
         st.write(transcription)
 
         st.write("Correcting transcription...")
         corrected_transcription = correct_transcription(transcription)
-        st.write("Transcription corrected.")
+        st.success("Transcription corrected.")
         st.write("Corrected Transcript:")
         st.write(corrected_transcription)
 
         st.write("Generating new audio...")
         new_audio_path = generate_audio(corrected_transcription)
-        st.write("New audio generated.")
+        st.success("New audio generated.")
         st.write("Generated Audio: ")
         st.audio(new_audio_path)
 
