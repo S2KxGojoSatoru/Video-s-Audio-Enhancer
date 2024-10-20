@@ -1,0 +1,8 @@
+streamlit
+moviepy
+SpeechRecognition
+gtts
+gTTS
+temp
+requests
+os
