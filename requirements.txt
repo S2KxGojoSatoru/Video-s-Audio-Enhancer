@@ -5,4 +5,3 @@ gtts
 gTTS
 temp
 requests
-os
